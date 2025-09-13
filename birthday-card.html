@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Birthday Card — Memory Lane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating animated hearts -->
+  <div class="hearts" aria-hidden="true" id="hearts"></div>
+
+  <!-- START SCREEN -->
+  <section class="wrap" id="start">
+    <div class="start">
+      <div class="mail-icon" aria-hidden="true">
+        <!-- Mail SVG -->
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="#fff" stroke-width="2"/>
+          <path d="M21 7 12 13 3 7" stroke="#fff" stroke-width="2"/>
+        </svg>
+      </div>
+      <h1 class="title" style="margin:12px 0 8px;">Here is a little gift for you 💌</h1>
+      <p class="hint">Tap the mail to open your birthday surprise</p>
+      <button class="mail-btn" id="openCardBtn" aria-label="Open the digital birthday card">
+        <span class="mail-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="#fff" stroke-width="2"/>
+            <path d="M21 7 12 13 3 7" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </span>
+        Open Card
+      </button>
+    </div>
+  </section>
+
+  <!-- CARD -->
+  <section class="wrap" id="card" hidden>
+    <article class="card" role="dialog" aria-labelledby="cardTitle">
+      <header class="card-header">
+        <div>
+          <h2 id="cardTitle" class="title">Happy Birthday, My Love! 🎂💖</h2>
+          <div class="subtitle"> Wishing you all the happiness, laughter, and love today and forever ❤️</div>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" id="toMemoryBtn">📸 Memory Lane</button>
+          <button class="btn" id="confettiBtn">🎉 Celebrate</button>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <figure class="polaroid">
+          <!-- Dummy photo: replace src with your image -->
+          <img src="assests\images\savithi.jpg" alt="Baby"/>
+        </figure>
+        <div>
+          <div class="message">
+            To the one who colors my world: 
+            <strong>thank you</strong> for every smile, every hug, and every tiny moment that feels like home. 
+            May today glow with laughter, sweet surprises, and all my love wrapped around you. 💞
+          </div>
+          <div class="chip-row" aria-label="Love tags">
+            <span class="chip">#Soulmate</span>
+            <span class="chip">#ForeverUs</span>
+            <span class="chip">#YouAreMySunshine</span>
+            <span class="chip">#BirthdayQueen</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- MEMORY LANE -->
+  <section class="wrap" id="memory" hidden>
+    <article class="memory">
+      <header style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div>
+          <h2>Memory Lane</h2>
+          <p>Little snapshots of our love story 💘</p>
+        </div>
+        <div class="actions">
+          <button class="btn" id="backToCardBtn">⬅️ Back to Card</button>
+        </div>
+      </header>
+
+      <section class="timeline" aria-label="Timeline of memories">
+        <!-- ITEM 1 -->
+        <div class="t-item">
+          <div class="t-dot">1</div>
+          <div class="t-card">
+            <h3>July - 2024</h3>
+            <div class="t-grid">
+              <img src="assests\images\july-1.jpg" alt="july-1.jpg">
+              <img src="assests\images\july-2.jpg" alt="july-2.jpg">
+              <img src="assests\images\july-3.jpg" alt="july-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 2 -->
+        <div class="t-item">
+          <div class="t-dot">2</div>
+          <div class="t-card">
+            <h3>Sep - 2024</h3>
+            <div class="t-grid">
+              <img src="assests\images\sep-1.jpg" alt="sep-1.jpg">
+              <img src="assests\images\sep-2.jpg" alt="sep-2.jpg">
+              <img src="assests\images\sep-3.jpg" alt="sep-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 3 -->
+        <div class="t-item">
+          <div class="t-dot">3</div>
+          <div class="t-card">
+            <h3>Oct - 2024</h3>
+            <div class="t-grid">
+              <img src="assests\images\oct-1.jpg" alt="oct-1.jpg">
+              <img src="assests\images\oct-2.jpg" alt="oct-2.jpg">
+              <img src="assests\images\oct-3.jpg" alt="oct-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 4 -->
+        <div class="t-item">
+          <div class="t-dot">4</div>
+          <div class="t-card">
+            <h3>Nov - 2024</h3>
+            <div class="t-grid">
+              <img src="assests\images\nov-1.jpg" alt="nov-1.jpg">
+              <img src="assests\images\nov-2.jpg" alt="nov-2.jpg">
+              <img src="assests\images\nov-3.jpg" alt="nov-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 5 -->
+        <div class="t-item">
+          <div class="t-dot">5</div>
+          <div class="t-card">
+            <h3>Dec - 2024</h3>
+            <div class="t-grid">
+              <img src="assests\images\dec-1.jpg" alt="dec-1.jpg">
+              <img src="assests\images\dec-2.jpg" alt="dec-2.jpg">
+              <img src="assests\images\dec-3.jpg" alt="dec-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 6 -->
+        <div class="t-item">
+          <div class="t-dot">6</div>
+          <div class="t-card">
+            <h3>Jan - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\jan-1.jpg" alt="jan-1.jpg">
+              <img src="assests\images\jan-2.jpg" alt="jan-2.jpg">
+              <img src="assests\images\jan-3.jpg" alt="jan-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 7 -->
+        <div class="t-item">
+          <div class="t-dot">7</div>
+          <div class="t-card">
+            <h3>Feb - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\feb-1.jpg" alt="feb-1.jpg">
+              <img src="assests\images\feb-2.jpg" alt="feb-2.jpg">
+              <img src="assests\images\feb-3.jpg" alt="feb-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 8 -->
+        <div class="t-item">
+          <div class="t-dot">8</div>
+          <div class="t-card">
+            <h3>Mar - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\mar-1.jpg" alt="mar-1.jpg">
+              <img src="assests\images\mar-2.jpg" alt="mar-2.jpg">
+              <img src="assests\images\mar-3.jpg" alt="mar-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 9 -->
+        <div class="t-item">
+          <div class="t-dot">9</div>
+          <div class="t-card">
+            <h3>Apr - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\apr-1.jpg" alt="apr-1.jpg">
+              <img src="assests\images\apr-2.jpg" alt="apr-2.jpg">
+              <img src="assests\images\apr-3.jpg" alt="apr-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 10 -->
+        <div class="t-item">
+          <div class="t-dot">10</div>
+          <div class="t-card">
+            <h3>June - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\june-1.jpg" alt="june-1.jpg">
+              <img src="assests\images\june-2.jpg" alt="june-2.jpg">
+              <img src="assests\images\june-3.jpg" alt="june-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 11 -->
+        <div class="t-item">
+          <div class="t-dot">11</div>
+          <div class="t-card">
+            <h3>july - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\july-1-1.jpg" alt="july-1-1.jpg">
+              <img src="assests\images\july-1-2.jpg" alt="july-1-2.jpg">
+              <img src="assests\images\july-1-3.jpg" alt="july-1-3.jpg">
+            </div>
+          </div>
+        </div>
+        <!-- ITEM 12 -->
+        <div class="t-item">
+          <div class="t-dot">12</div>
+          <div class="t-card">
+            <h3>Aug - 2025</h3>
+            <div class="t-grid">
+              <img src="assests\images\aug-1.jpg" alt="aug-1.jpg">
+              <img src="assests\images\aug-2.jpg" alt="aug-2.jpg">
+              <img src="assests\images\aug-3.jpg" alt="aug-3.jpg">
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </section>
+
+  <!-- AUDIO: Replace with your own files/links. They start only on button clicks (user action) to avoid autoplay blocking. -->
+  <audio id="musicCard" src="assests/audio/savithi.mp3" preload="auto" loop></audio>
+  <audio id="musicMemory" src="assests/audio/calm.mp3" preload="auto" loop></audio>
+
+  <!-- Canvas for confetti -->
+  <canvas class="confetti" id="confetti"></canvas>
+
+  <button class="mutebtn" id="muteBtn" aria-label="Mute/Unmute audio">
+    🔊
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
